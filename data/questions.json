@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q01",
+    "paper": "Attention Is All You Need",
+    "question": "What is the total model dimension d_model and number of attention heads h in the base Transformer?",
+    "expected_refusal": false,
+    "key_facts": ["d_model = 512", "h = 8", "d_k = d_v = 64"],
+    "citation": "[Attention Is All You Need, Section 3.2.2, Page 5]"
+  },
+  {
+    "id": "q02",
+    "paper": "Attention Is All You Need",
+    "question": "What is the inner-layer dimensionality d_ff of the position-wise feed-forward networks in the base Transformer?",
+    "expected_refusal": false,
+    "key_facts": ["d_ff = 2048"],
+    "citation": "[Attention Is All You Need, Section 3.3, Page 5]"
+  },
+  {
+    "id": "q03",
+    "paper": "Attention Is All You Need",
+    "question": "What formula is used for the positional encodings in the Transformer?",
+    "expected_refusal": false,
+    "key_facts": ["sine and cosine functions of different frequencies", "10000^(2i/d_model)"],
+    "citation": "[Attention Is All You Need, Section 3.5, Page 6]"
+  },
+  {
+    "id": "q04",
+    "paper": "Attention Is All You Need",
+    "question": "What BLEU score did the big Transformer model achieve on the WMT 2014 English-to-German translation task in Table 2?",
+    "expected_refusal": false,
+    "key_facts": ["28.4 BLEU"],
+    "citation": "[Attention Is All You Need, Section 5.1, Page 8]"
+  },
+  {
+    "id": "q05",
+    "paper": "Moshi",
+    "question": "What is the audio sampling rate and frame rate of the Mimi neural audio codec?",
+    "expected_refusal": false,
+    "key_facts": ["24 kHz sampling rate", "12.5 Hz frame rate"],
+    "citation": "[Moshi, Section 3.3, Page 6]"
+  },
+  {
+    "id": "q06",
+    "paper": "Moshi",
+    "question": "What is the total bitrate and algorithmic latency of the Mimi codec in Moshi?",
+    "expected_refusal": false,
+    "key_facts": ["1.1 kbps bitrate", "80ms algorithmic latency"],
+    "citation": "[Moshi, Section 3.3, Page 6]"
+  },
+  {
+    "id": "q07",
+    "paper": "Moshi",
+    "question": "How many codebooks are used in the split Residual Vector Quantization (RVQ) scheme of Mimi?",
+    "expected_refusal": false,
+    "key_facts": ["8 codebooks", "1 semantic and 7 acoustic"],
+    "citation": "[Moshi, Section 3.3.2, Page 11]"
+  },
+  {
+    "id": "q08",
+    "paper": "Moshi",
+    "question": "What is the parameter size of the Helium text foundation model that Moshi initializes its text backbone from?",
+    "expected_refusal": false,
+    "key_facts": ["7B parameters", "Helium-7B"],
+    "citation": "[Moshi, Section 3.1, Page 4]"
+  },
+  {
+    "id": "q09",
+    "paper": "Dynamic Chunking",
+    "question": "What core component does H-Net use to replace fixed heuristic Byte-Pair Encoding (BPE) tokenizers?",
+    "expected_refusal": false,
+    "key_facts": ["dynamic chunking mechanism", "learned hierarchical sequence modeling", "byte-level modeling"],
+    "citation": "[Dynamic Chunking, Section 1, Page 2]"
+  },
+  {
+    "id": "q10",
+    "paper": "Dynamic Chunking",
+    "question": "On which non-standard sequence modality does H-Net achieve a 4x data efficiency gain over BPE-tokenized baselines?",
+    "expected_refusal": false,
+    "key_facts": ["DNA sequences"],
+    "citation": "[Dynamic Chunking, Section 4.2, Page 18]"
+  },
+  {
+    "id": "q11",
+    "paper": "Dynamic Chunking",
+    "question": "What dynamic thresholding or boundary predictor function does H-Net use to determine chunk boundaries?",
+    "expected_refusal": false,
+    "key_facts": ["boundary transition probability", "lightweight router", "dynamic segmentation"],
+    "citation": "[Dynamic Chunking, Section 3.1, Page 6]"
+  },
+  {
+    "id": "q12",
+    "paper": "Dynamic Chunking",
+    "question": "How does H-Net compare in parameter efficiency and speed when scaled to multiple hierarchical stages?",
+    "expected_refusal": false,
+    "key_facts": ["matches token-based Transformers twice its size", "reduced sequence length"],
+    "citation": "[Dynamic Chunking, Section 4.1, Page 15]"
+  },
+  {
+    "id": "q13",
+    "paper": "Cross-paper / Misleading",
+    "question": "In Moshi, how is the self-attention mechanism modified compared to the standard multi-head attention in Attention Is All You Need?",
+    "expected_refusal": false,
+    "key_facts": ["causal cross-attention across audio and text streams", "dual-stream transformer"],
+    "citation": "[Moshi, Section 3.2, Page 5]"
+  },
+  {
+    "id": "q14",
+    "paper": "Cross-paper / Misleading",
+    "question": "Does Attention Is All You Need support byte-level inputs without vocabulary lookups?",
+    "expected_refusal": false,
+    "key_facts": ["No, it uses byte-pair encoding or word-piece vocabulary of ~37,000 tokens", "byte-level is introduced in H-Net"],
+    "citation": "[Attention Is All You Need, Section 5, Page 7]"
+  },
+  {
+    "id": "q15",
+    "paper": "Out-of-corpus / Refusal",
+    "question": "What is the quantum fidelity of the entanglement routing algorithm described in the papers?",
+    "expected_refusal": true,
+    "key_facts": ["The papers do not mention quantum fidelity or entanglement routing."],
+    "citation": "None"
+  },
+  {
+    "id": "q16",
+    "paper": "Out-of-corpus / Refusal",
+    "question": "What is the recommended hyperparameter setting for training the Whisper large-v3 model on LibriSpeech?",
+    "expected_refusal": true,
+    "key_facts": ["The papers do not provide hyperparameters for Whisper large-v3 on LibriSpeech."],
+    "citation": "None"
+  },
+  {
+    "id": "q17",
+    "paper": "Out-of-corpus / Refusal",
+    "question": "How much electricity in megawatt-hours was consumed to train the GPT-4 model?",
+    "expected_refusal": true,
+    "key_facts": ["The papers do not mention GPT-4 energy or electricity consumption."],
+    "citation": "None"
+  },
+  {
+    "id": "q18",
+    "paper": "Out-of-corpus / Refusal",
+    "question": "What are the clinical trial results for drug-target binding affinity in the 2026 update of the library?",
+    "expected_refusal": true,
+    "key_facts": ["The library only contains 3 NLP/Audio/Sequence modeling papers and no clinical trials."],
+    "citation": "None"
+  }
+]
+
